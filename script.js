@@ -17,9 +17,8 @@ let tanaman = [
   { nama: "Mint", kondisi: ["Pot", "Sedang"] },
   { nama: "Peterseli", kondisi: ["Pot", "Sedang"] },
   { nama: "Jeruk Bali", kondisi: ["Pantai", "Sedang"] },
-  { nama: "Jambu Air", kondisi: ["Pantai", "Sedang"] }
+  { nama: "Jambu Air", kondisi: ["Pantai", "Sedang"] },
 ];
-
 
 // Fungsi untuk memilih tanaman berdasarkan kondisi
 function pilihTanaman() {
@@ -37,5 +36,9 @@ function pilihTanaman() {
   });
 
   let hasilElement = document.getElementById("hasil");
-  hasilElement.textContent = "Tanaman yang cocok: " + tanamanCocok.join(", ");
+  if (tanamanCocok.length != 0) {
+    hasilElement.textContent = "Tanaman yang cocok: " + tanamanCocok.join(", ");
+  } else {
+    hasilElement.textContent = "Tanaman tidak ditemukan: ";
+  }
 }
