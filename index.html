@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistem Pakar Pemilihan Tanaman</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <style>
       /* CSS tambahan untuk membuat body berada di tengah */
       body {
@@ -18,8 +22,14 @@
       <h1 class="text-2xl font-bold mb-4">Sistem Pakar Pemilihan Tanaman</h1>
       <div class="mb-4">
         <label for="kondisiTanah" class="block">Media Tanah:</label>
-        <select id="kondisiTanah" name="kondisiTanah" class="border border-gray-300 rounded px-3 py-1 w-full">
-          <option value="" selected disabled hidden>Pilih Media Tanam...</option>
+        <select
+          id="kondisiTanah"
+          name="kondisiTanah"
+          class="border border-gray-300 rounded px-3 py-1 w-full"
+        >
+          <option value="" selected disabled hidden>
+            Pilih Media Tanam...
+          </option>
           <option value="Sawah">Sawah</option>
           <option value="Pot">Pot</option>
           <option value="Pantai">Pantai</option>
@@ -28,15 +38,26 @@
 
       <div class="mb-4">
         <label for="kondisiIklim" class="block">Kondisi Iklim:</label>
-        <select id="kondisiIklim" name="kondisiIklim" class="border border-gray-300 rounded px-3 py-1 w-full">
-          <option value="" selected disabled hidden>Pilih Kondisi Iklim...</option>
+        <select
+          id="kondisiIklim"
+          name="kondisiIklim"
+          class="border border-gray-300 rounded px-3 py-1 w-full"
+        >
+          <option value="" selected disabled hidden>
+            Pilih Kondisi Iklim...
+          </option>
           <option value="Tropis">Tropis</option>
           <option value="Subtropis">Subtropis</option>
           <option value="Sedang">Sedang</option>
         </select>
       </div>
 
-      <button onclick="pilihTanaman()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">Pilih Tanaman</button>
+      <button
+        onclick="pilihTanaman()"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+      >
+        Pilih Tanaman
+      </button>
 
       <p id="hasil" class="mt-4"></p>
     </div>
