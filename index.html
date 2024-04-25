@@ -1,23 +1,54 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistem Pakar Pemilihan Tanaman</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      /* CSS tambahan untuk membuat body berada di tengah */
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-    </style>
-  </head>
-  <body>
+<html class="h-full">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Pakar Pemilihan Tanaman</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* CSS tambahan untuk membuat body berada di tengah */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body class="flex flex-col h-full">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 text-white p-4">
+    <div class="flex justify-between items-center">
+      <!-- <div>
+        <a href="#" class="text-xl font-bold">Sistem Pakar</a>
+      </div> -->
+      <div class="hidden md:flex md:items-center space-x-4">
+        <ul class="flex space-x-4">
+          <li><a href="/index.html" class="hover:text-gray-300">Home</a></li>
+          <li><a href="/flowchart.html" class="hover:text-gray-300">Flowchart</a></li>
+        </ul>
+      </div>
+      <!-- Hamburger button for mobile -->
+      <div class="md:hidden">
+        <button id="hamburgerBtn" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden">
+      <ul class="flex flex-col items-center mt-4">
+        <li><a href="/index.html" class="block py-2 px-4 hover:text-gray-300">Home</a></li>
+        <li><a href="/flowchart.html" class="block py-2 px-4 hover:text-gray-300">Flowchart</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="flex-grow p-4">
     <div class="w-full max-w-md p-8 bg-white rounded shadow-md">
       <h1 class="text-2xl font-bold mb-4">Sistem Pakar Pemilihan Tanaman</h1>
       <div class="mb-4">
@@ -61,7 +92,14 @@
 
       <p id="hasil" class="mt-4"></p>
     </div>
-
-    <script src="script.js"></script>
-  </body>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    // Toggling mobile menu visibility
+    document.getElementById('hamburgerBtn').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+</body>
 </html>
